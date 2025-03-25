@@ -1,0 +1,61 @@
+1. TCP (Transmission Control Protocol)
+Connection-oriented Protocol → Establishes a reliable connection before data transfer.
+
+Reliable → Ensures all packets are delivered in the correct order using error checking and acknowledgment (ACK).
+
+Slower → Due to error correction and retransmission.
+
+Used for → Applications that require data accuracy (e.g., Web Browsing, Emails, File Transfers).
+
+How TCP Works (3-Way Handshake)
+SYN (Synchronize) → Client sends a SYN packet to initiate a connection.
+
+SYN-ACK → Server responds with SYN-ACK to acknowledge the request.
+
+ACK (Acknowledge) → Client sends an ACK to confirm, establishing the connection.
+
+🔎 Diagram: TCP 3-Way Handshake
+
+Client                   Server
+  |                         |
+  | --------SYN-----------> |  (Client initiates connection)
+  | <------SYN-ACK--------  |  (Server acknowledges)
+  | --------ACK-----------> |  (Client acknowledges and connection established)
+
+After connection establishment:
+
+Data is sent in segments.
+
+The receiver sends an acknowledgment for each segment.
+
+If any packet is lost, TCP will retransmit it.
+
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+
+2. UDP (User Datagram Protocol)
+Connectionless Protocol → No connection establishment is required.
+
+Unreliable → Packets may arrive out of order or get lost without notification.
+
+Faster → Low latency since no error-checking or acknowledgment.
+
+Used for → Applications that prioritize speed over reliability (e.g., Video Streaming, Online Gaming, VoIP).
+
+How UDP Works
+The sender sends data packets (called datagrams) to the receiver without ensuring they arrive.
+
+There’s no acknowledgment or retransmission in case of packet loss.
+
+🔎 Diagram: UDP Communication
+
+Client                  Server
+  |                        |
+  | --------Data---------> |  (Client sends data without establishing connection)
+  | --------Data---------> |  (Packets may arrive in any order or not at all)
+
+
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
