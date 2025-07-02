@@ -108,3 +108,5 @@ int main()
     WSACleanup();
     return 0;
 }
+
+// g++ client.cpp -o client.exe -lws2_32
